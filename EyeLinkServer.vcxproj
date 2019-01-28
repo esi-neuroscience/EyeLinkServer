@@ -76,15 +76,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>H:\EyeLink\Includes\eyelink;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\SR Research\EyeLink\Includes\eyelink;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>H:\EyeLink\Includes\eyelink;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\SR Research\EyeLink\Includes\eyelink;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -179,25 +183,33 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CScreen.h" />
+    <ClInclude Include="CTransformation.h" />
     <ClInclude Include="EyeLinkServer.h" />
     <ClInclude Include="EyeLinkServerDoc.h" />
     <ClInclude Include="EyeLinkServerView.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="PipeProcedure.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Target.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CScreen.cpp" />
+    <ClCompile Include="CTransformation.cpp" />
     <ClCompile Include="EyeLinkServer.cpp" />
     <ClCompile Include="EyeLinkServerDoc.cpp" />
     <ClCompile Include="EyeLinkServerView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="PipeProcedure.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Target.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="EyeLinkServer.reg" />
@@ -209,6 +221,13 @@
   <ItemGroup>
     <Image Include="res\EyeLinkServer.ico" />
     <Image Include="res\EyeLinkServerDoc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="C:\Program Files (x86)\SR Research\EyeLink\libs\x64\eyelink_core64.lib" />
+    <Library Include="C:\Program Files (x86)\SR Research\EyeLink\libs\x64\eyelink_w32_comp64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
