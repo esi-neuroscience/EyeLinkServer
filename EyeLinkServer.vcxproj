@@ -189,6 +189,7 @@
     <ClInclude Include="EyeLinkServerDoc.h" />
     <ClInclude Include="EyeLinkServerView.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Persist.h" />
     <ClInclude Include="PipeProcedure.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -202,6 +203,7 @@
     <ClCompile Include="EyeLinkServerDoc.cpp" />
     <ClCompile Include="EyeLinkServerView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Persist.cpp" />
     <ClCompile Include="PipeProcedure.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
