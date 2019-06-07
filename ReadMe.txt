@@ -126,3 +126,4 @@ redistributing Visual C++ applications in MSDN documentation.
 1.1.5.0 13-May-2019 MSt draw to tracker screen only in offline mode
 1.1.5.1 21-May-2019 MSt Support for 16 bit digital inputs
 1.1.6.0 28-May-2019 MSt Honor FIXUPDATES of one eye only
+1.1.6.1 06-Jun-2019 MSt speedup of start recording
