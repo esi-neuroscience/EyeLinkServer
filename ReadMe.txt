@@ -128,3 +128,4 @@ redistributing Visual C++ applications in MSDN documentation.
 1.1.6.0 28-May-2019 MSt Honor FIXUPDATES of one eye only
 1.1.6.1 06-Jun-2019 MSt speedup of start recording
 1.1.6.2 13-Jun-2019 MSt bugfix in "EyeLink->Connect"
+1.1.6.3 21-Jun-2019 MSt code clean up

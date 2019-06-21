@@ -6,7 +6,7 @@ class CTransformation :
 public:
 	CTransformation() {};
 //	~CTransformation();
-	virtual void Apply(float* x, float* y) = 0;
+	virtual void Apply(float& x, float& y) = 0;
 	virtual void xMsg(char* msg) = 0;
 	virtual void yMsg(char* msg) = 0;
 };
@@ -17,7 +17,7 @@ class CLinearTransform :
 public:
 	CLinearTransform(float* message);
 //	~CLinearTransform();
-	void Apply(float* x, float* y);
+	void Apply(float& x, float& y);
 	void xMsg(char* msg);
 	void yMsg(char* msg);
 private:
@@ -30,7 +30,7 @@ class CPolynom2Transform :
 public:
 	CPolynom2Transform(float* message);
 	//	~CPolynom2Transform();
-	void Apply(float* x, float* y);
+	void Apply(float& x, float& y);
 	void xMsg(char* msg);
 	void yMsg(char* msg);
 private:
@@ -43,7 +43,7 @@ class CbiquadTransform :
 public:
 	CbiquadTransform(float* message);
 	//	~CbiquadTransform();
-	void Apply(float* x, float* y);
+	void Apply(float& x, float& y);
 	void xMsg(char* msg);
 	void yMsg(char* msg);
 private:
