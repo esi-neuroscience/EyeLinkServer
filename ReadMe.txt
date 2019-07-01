@@ -130,3 +130,4 @@ redistributing Visual C++ applications in MSDN documentation.
 1.1.6.2 13-Jun-2019 MSt bugfix in "EyeLink->Connect"
 1.1.6.3 21-Jun-2019 MSt code clean up
 1.1.6.4 01-Jul-2019 MSt popup error if no End Parse event on "stop"
+1.1.7.0 01-Jul-2019 MSt new pass "Message" command
