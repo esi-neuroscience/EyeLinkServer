@@ -131,3 +131,5 @@ redistributing Visual C++ applications in MSDN documentation.
 1.1.6.3 21-Jun-2019 MSt code clean up
 1.1.6.4 01-Jul-2019 MSt popup error if no End Parse event on "stop"
 1.1.7.0 01-Jul-2019 MSt new pass "Message" command
+1.1.7.1 01-Aug-2019 MSt increased pipe's input buffer size from 128 to 256
+						(to allow for very long file names)

@@ -1,7 +1,7 @@
 UINT PipeProcedure( LPVOID pParam );
 void WritePipe(void* buffer, unsigned char bytesToWrite);
 
-#define BUFFERSIZE 128
+#define BUFFERSIZE 256
 
 union COMMANDBUFFER {
 	unsigned char command[BUFFERSIZE];
