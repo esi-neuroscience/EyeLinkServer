@@ -2,9 +2,8 @@ EyeLinkServer for ARCADE
 ========================
 
 The ARCADE *EyeLinkServer* serves and monitors the eye position acquired via the 
-ethernet interface of EyeLink® eye trackers (https://www.sr-research.com). It is
+ethernet interface of EyeLink eye trackers (https://www.sr-research.com). It is
 part of the application suite ARCADE (http://github.com/esi-neuroscience/arcade).
-
 Binary releases and documentation are distributed as part of the ARCADE. A MATLAB 
 interface to the EyeLinkServer is also provided in ARCADE.
 
