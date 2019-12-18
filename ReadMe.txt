@@ -133,3 +133,5 @@ redistributing Visual C++ applications in MSDN documentation.
 1.1.7.0 01-Jul-2019 MSt new pass "Message" command
 1.1.7.1 01-Aug-2019 MSt increased pipe's input buffer size from 128 to 256
 						(to allow for very long file names)
+1.2.0.0 18-Dec-2019 MSt make In- Out- events mutually exclusive
+						exclusive behaviour can be disabled through a command
