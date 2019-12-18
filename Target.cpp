@@ -15,6 +15,7 @@ CTarget::CTarget(void)
 	: m_OutOnBlink(false)
 	, m_wasInside(false)
 	, m_isDrawn(false)
+	, m_inclusive(false)
 {
 }
 
@@ -43,6 +44,17 @@ CTarget::~CTarget()
 
 
 // CTarget-Memberfunktionen
+
+void CTarget::FixationUpdate(float x, float y)
+{
+	bool isInside = Inside(x, y);
+	if (isInside != m_wasInside)
+	{
+		if (!m_inclusive) ResetEvent(isInside ? m_hLeave : m_hEnter);
+		SetEvent(isInside ? m_hEnter : m_hLeave);
+		m_wasInside = isInside;
+	}
+}
 
 
 // CCircle
