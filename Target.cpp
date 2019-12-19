@@ -50,10 +50,34 @@ void CTarget::FixationUpdate(float x, float y)
 	bool isInside = Inside(x, y);
 	if (isInside != m_wasInside)
 	{
-		if (!m_inclusive) ResetEvent(isInside ? m_hLeave : m_hEnter);
-		SetEvent(isInside ? m_hEnter : m_hLeave);
+		if (!m_inclusive) VERIFY(ResetEvent(isInside ? m_hLeave : m_hEnter));
+		VERIFY(SetEvent(isInside ? m_hEnter : m_hLeave));
 		m_wasInside = isInside;
 	}
+}
+
+
+short CTarget::Command(unsigned char message[], DWORD messageLength)
+{
+	switch (message[0])
+	{
+	case 1:
+		m_OutOnBlink = true;
+		return -1;	// success -- no key to return
+		break;
+	case 2:
+		m_inclusive = true;
+		return -1;	// success -- no key to return
+		break;
+	default:
+		ASSERT(false);
+	}
+	return 0;	// error
+}
+
+void CTarget::OutOnBlink()
+{
+	if (m_wasInside && m_OutOnBlink) VERIFY(SetEvent(m_hLeave));
 }
 
 
