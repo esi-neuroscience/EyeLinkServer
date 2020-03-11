@@ -16,6 +16,9 @@ CTarget::CTarget(void)
 	, m_wasInside(false)
 	, m_isDrawn(false)
 	, m_inclusive(false)
+	, m_hEnter(NULL)
+	, m_hLeave(NULL)
+	, m_position()
 {
 }
 
@@ -104,7 +107,7 @@ CCircle::~CCircle()
 // CCircle-Memberfunktionen
 bool CCircle::Inside(float x, float y)
 {
-	return sqrt((x-m_position[0])*(x-m_position[0]) + (y-m_position[1])*(y-m_position[1])) <= m_radius;
+	return sqrtf((x-m_position[0])*(x-m_position[0]) + (y-m_position[1])*(y-m_position[1])) <= m_radius;
 }
 
 /*
@@ -129,7 +132,7 @@ void CCircle::DrawEyelink(BYTE color)
 	char cmd[37];
 	for (BYTE i = 1; i <= 8; i++)
 	{
-		float phi = i * M_PI_4;
+		float phi = i * (float) M_PI_4;
 		x2 = (short) m_position[0] + m_radius * cosf(phi);
 		y2 = (short) m_position[1] + m_radius * sinf(phi);
 		VERIFY(-1 != sprintf(&cmd[0], "draw_line %d %d %d %d %u", x1, y1, x2, y2, color));
