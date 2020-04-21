@@ -55,6 +55,8 @@ void CTarget::FixationUpdate(float x, float y)
 	{
 		if (!m_inclusive) VERIFY(ResetEvent(isInside ? m_hLeave : m_hEnter));
 		VERIFY(SetEvent(isInside ? m_hEnter : m_hLeave));
+		if ( isInside && m_flags.enter) VERIFY(SetEvent(theApp.m_hEndDeferredMode));
+		if (!isInside && m_flags.leave) VERIFY(SetEvent(theApp.m_hEndDeferredMode));
 		m_wasInside = isInside;
 	}
 }
@@ -72,6 +74,9 @@ short CTarget::Command(unsigned char message[], DWORD messageLength)
 		m_inclusive = true;
 		return -1;	// success -- no key to return
 		break;
+	case 3:
+		m_flags.flagBits = message[1];
+		return -1;	// success -- no key to return
 	default:
 		ASSERT(false);
 	}

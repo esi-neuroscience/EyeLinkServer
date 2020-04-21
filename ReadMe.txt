@@ -135,3 +135,7 @@ redistributing Visual C++ applications in MSDN documentation.
 						(to allow for very long file names)
 1.2.0.0 18-Dec-2019 MSt make In- Out- events mutually exclusive
 						exclusive behaviour can be disabled through a command
+1.2.1.0 18-Mar-2020 MSt support to receive samples for speed up
+1.2.2.0 13-Apr-2020 MSt support for EndDeferredMode events
+
+
