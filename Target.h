@@ -23,6 +23,16 @@ private:
 	HANDLE m_hEnter;
 	bool m_inclusive;
 	bool m_OutOnBlink;	// signal "Out" ("leave") event on blink
+	union
+	{
+		BYTE flagBits;
+		struct
+		{
+			BYTE enter : 1;
+			BYTE leave : 1;
+			BYTE : 6;
+		};
+	} m_flags;
 };
 
 
