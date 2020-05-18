@@ -137,5 +137,6 @@ redistributing Visual C++ applications in MSDN documentation.
 						exclusive behaviour can be disabled through a command
 1.2.1.0 18-Mar-2020 MSt support to receive samples for speed up
 1.2.2.0 13-Apr-2020 MSt support for EndDeferredMode events
+1.2.2.1 18-May 2020 MSt bug fix: exit after close
 
 
