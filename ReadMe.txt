@@ -140,4 +140,4 @@ redistributing Visual C++ applications in MSDN documentation.
 1.2.2.1 18-May 2020 MSt bug fix: exit after close
 1.2.3.0 19-May 2020 MSt support for start saccade events
 1.2.3.1 02-Feb-2022 MSt support for start/stop fixation events
-
+1.2.4.0 16-Feb-2022 MSt use gaze data from fixation end and saccade end
