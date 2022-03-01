@@ -144,3 +144,4 @@ redistributing Visual C++ applications in MSDN documentation.
 1.2.4.1 20-Feb-2022 MSt use gav* rather than gen*
 1.2.4.2 21-Feb-2022 MSt use gen* with end fixation and end saccade events
 1.2.4.3 01-Mar-2022 MSt use gav* with end fixation events
+1.2.4.4 01-Mar-2022 MSt no gaze evaluation on end fixation events
