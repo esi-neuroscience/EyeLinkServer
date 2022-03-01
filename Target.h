@@ -32,7 +32,7 @@ private:
 			BYTE leave : 1;
 			BYTE : 6;
 		};
-	} m_flags;
+	} m_flags = { 0 };
 };
 
 
